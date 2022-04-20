@@ -1,11 +1,11 @@
-public class ConsumaDato extends Thread{
+public class ConsumaDato1 extends Thread{
 
     Semaforo pieno;
     Semaforo vuoto;
     int dato;
 
-    public ConsumaDato(Semaforo s1,Semaforo s2){
-        setName("paperino");
+    public ConsumaDato1(Semaforo s1,Semaforo s2){
+        setName("pippo");
         pieno=s1;
         vuoto=s2;
 
@@ -19,7 +19,7 @@ public class ConsumaDato extends Thread{
 
             dato=Prod.buffer;
             System.out.println("Lettore dato letto " +dato);
-            System.out.println("Questo consumatore è  " +getName());
+            System.out.println("Questo consumatore è "+getName());
             vuoto.V();
 
         }
